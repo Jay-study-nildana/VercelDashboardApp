@@ -33,6 +33,17 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
     JOIN customers ON invoices.customer_id = customers.id
     WHERE invoices.amount = 666;
     ```
+1. artificial delay.
+    1. in file data.ts, I have added a artificial delay of 3 seconds to simulate slow network access. you can comment it or uncomment it as required.
+    1. here is the exact snippet.
+        ```
+            console.log('Fetching revenue data...');
+            await new Promise((resolve) => setTimeout(resolve, 3000));
+
+            const data = await sql<Revenue>`SELECT * FROM revenue`;
+
+            console.log('Data fetch completed after 3 seconds.');
+        ```
 1. more stuff
 
 # hire and get to know me
