@@ -24,7 +24,7 @@ export default function LoginForm() {
           UserName : user@nextmail.com, Password : 123456
         </h2>
         <h3 className={`${lusitana.className} mb-3`}>
-          it's okay. it's just a demo project.
+          {`it's okay. it's just a demo project.`}
         </h3>        
         <div className="w-full">
           <div>
