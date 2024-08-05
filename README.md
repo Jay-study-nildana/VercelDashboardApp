@@ -10,11 +10,37 @@ This is the starter template for the Next.js App Router Course. It contains the 
 
 For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
 
-# About .env file and setting up PostGres
+# notes about .env file
 
-1. First, you should create a .env file
+First, look at these links as they will explain how to get the values for database and also authentication. These values you have to put in the env file. These values are unique to your project, so, you have to create them and I cannot share them here. 
+
+1. https://nextjs.org/learn/dashboard-app/setting-up-your-database
+2. https://nextjs.org/learn/dashboard-app/adding-authentication
+
+Now, the .env file will look something like this 
+
+```
+POSTGRES_URL=""
+POSTGRES_PRISMA_URL=""
+POSTGRES_URL_NO_SSL=""
+POSTGRES_URL_NON_POOLING=""
+POSTGRES_USER=""
+POSTGRES_HOST=""
+POSTGRES_PASSWORD=""
+POSTGRES_DATABASE=""
+
+# `openssl rand -base64 32`
+AUTH_SECRET=
+AUTH_URL=
+
+```
+Remember the following points.
+
 1. Copy the env secrets from your Vercel Dashboard and put it in this env file
 1. VERY IMPORTANT: make sure your gitignore is ignoring .env file. 
+
+# setting up PostGres
+
 1. run the 'npm run seed' command and you should see something like this.
     ```
     Created "users" table
